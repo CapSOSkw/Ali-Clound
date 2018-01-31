@@ -27,3 +27,27 @@
 城市数据为‘CityData.csv’，包含城市编号和区域块坐标信息。伦敦为起点城市，城市编号为0，其他城市为目的地城市，编号依次为1，2，3……10。数据格式详见表1。
        
 ![alt text](https://github.com/CapSOSkw/Ali-Clound/blob/master/png/Screen%20Shot%202018-01-31%20at%2011.12.17.png?raw=true)
+
+英国气象局发布的气象数据经过脱敏后，天气预测数据为‘ForecastDataforTraining.csv’，天气真值数据为‘In-situMeasurementforTraining.csv’。天气预测数据中包含了 6列数据，数据格式详见表2。天气真值数据中包含了 5列数据，数据格式详见表3。
+
+![alt text](https://github.com/CapSOSkw/Ali-Clound/blob/master/png/Screen%20Shot%202018-01-31%20at%2011.12.26.png?raw=true)
+
+线上测试的数据为‘ForecastDataforTesting.csv’，数据格式与天气预测数据的格式一致，详见表2。 
+
+ 注：天气预报数据的间隔时间为1个小时，但无人机2分钟飞越一个区域块，因此赛题假定在从预报时刻点开始，一个小时的天气保持不变。
+
+ 
+
+#### 4. 目标函数
+
+我们将根据一天中每小时的实际天气状况评估参赛者提交内容中所描述的飞行器路线。  如果有任何一时刻飞行器进入极恶劣的天气环境后损毁，那么将导致 24 小时的延时处罚。 
+
+比赛最终得分将是飞行器成功航行时间总时长（分钟）加上处罚（分钟）总数。分数最低者赢得比赛。
+
+![alt text](https://github.com/CapSOSkw/Ali-Clound/blob/master/png/Screen%20Shot%202018-01-31%20at%2011.12.35.png?raw=true)
+
+#### 5. 参赛者提交内容
+
+参赛者需要根据5天的测试数据提交一个汇总的航行路线文件（csv文件，逗号分隔）。  该航行路线文件应包含以下五列数据：目的地编号、日期编号、时间（格式为hh:mm）、x轴坐标、y轴坐标。航行路线文件应包含航行过程中每两分钟的详细航行路线。文件格式示详见表4（提交时统一规定不要包含表头）。
+
+![alt text](https://github.com/CapSOSkw/Ali-Clound/blob/master/png/Screen%20Shot%202018-01-31%20at%2011.12.42.png?raw=true)
